@@ -45,11 +45,12 @@
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         
-        NSLog(@"Success");
-//        User *user = [[User alloc] init];
+        NSLog(@"Success %@", JSON);
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        
         NSLog(@"Failure %@%@%@%@", request, response, error, JSON);
+        
     }];
     
     [operation start];
