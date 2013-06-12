@@ -152,17 +152,14 @@
 		C22376501766657C00A153E8 /* ePic */ = {
 			isa = PBXGroup;
 			children = (
+				C238CA771768D160002BE590 /* View Controllers */,
 				C238CA731768B791002BE590 /* Util */,
 				C238CA6F1768AD84002BE590 /* Models */,
 				C22376591766657C00A153E8 /* AppDelegate.h */,
 				C223765A1766657C00A153E8 /* AppDelegate.m */,
 				C22376621766657D00A153E8 /* MainStoryboard_iPhone.storyboard */,
 				C22376651766657D00A153E8 /* MainStoryboard_iPad.storyboard */,
-				C22376681766657D00A153E8 /* ViewController.h */,
-				C22376691766657D00A153E8 /* ViewController.m */,
 				C22376511766657C00A153E8 /* Supporting Files */,
-				C238CA6C1767CF68002BE590 /* AlbumsViewController.h */,
-				C238CA6D1767CF68002BE590 /* AlbumsViewController.m */,
 			);
 			path = ePic;
 			sourceTree = "<group>";
@@ -199,6 +196,17 @@
 				C238CA751768B7C3002BE590 /* Constants.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		C238CA771768D160002BE590 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C238CA6D1767CF68002BE590 /* AlbumsViewController.m */,
+				C238CA6C1767CF68002BE590 /* AlbumsViewController.h */,
+				C22376691766657D00A153E8 /* ViewController.m */,
+				C22376681766657D00A153E8 /* ViewController.h */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
