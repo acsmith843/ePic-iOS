@@ -29,6 +29,9 @@
 		C22376641766657D00A153E8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22376621766657D00A153E8 /* MainStoryboard_iPhone.storyboard */; };
 		C22376671766657D00A153E8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22376651766657D00A153E8 /* MainStoryboard_iPad.storyboard */; };
 		C223766A1766657D00A153E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22376691766657D00A153E8 /* ViewController.m */; };
+		C238CA6E1767CF68002BE590 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C238CA6D1767CF68002BE590 /* AlbumsViewController.m */; };
+		C238CA721768ADB0002BE590 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = C238CA711768ADB0002BE590 /* Album.m */; };
+		C238CA761768B7C3002BE590 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = C238CA751768B7C3002BE590 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,12 @@
 		C22376661766657D00A153E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		C22376681766657D00A153E8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C22376691766657D00A153E8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C238CA6C1767CF68002BE590 /* AlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumsViewController.h; sourceTree = "<group>"; };
+		C238CA6D1767CF68002BE590 /* AlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumsViewController.m; sourceTree = "<group>"; };
+		C238CA701768ADB0002BE590 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		C238CA711768ADB0002BE590 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		C238CA741768B7C3002BE590 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		C238CA751768B7C3002BE590 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +152,8 @@
 		C22376501766657C00A153E8 /* ePic */ = {
 			isa = PBXGroup;
 			children = (
+				C238CA731768B791002BE590 /* Util */,
+				C238CA6F1768AD84002BE590 /* Models */,
 				C22376591766657C00A153E8 /* AppDelegate.h */,
 				C223765A1766657C00A153E8 /* AppDelegate.m */,
 				C22376621766657D00A153E8 /* MainStoryboard_iPhone.storyboard */,
@@ -150,8 +161,8 @@
 				C22376681766657D00A153E8 /* ViewController.h */,
 				C22376691766657D00A153E8 /* ViewController.m */,
 				C22376511766657C00A153E8 /* Supporting Files */,
-				C221089D17676B4700C79FA6 /* User.h */,
-				C221089E17676B4700C79FA6 /* User.m */,
+				C238CA6C1767CF68002BE590 /* AlbumsViewController.h */,
+				C238CA6D1767CF68002BE590 /* AlbumsViewController.m */,
 			);
 			path = ePic;
 			sourceTree = "<group>";
@@ -168,6 +179,26 @@
 				C22376601766657D00A153E8 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C238CA6F1768AD84002BE590 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C221089E17676B4700C79FA6 /* User.m */,
+				C221089D17676B4700C79FA6 /* User.h */,
+				C238CA701768ADB0002BE590 /* Album.h */,
+				C238CA711768ADB0002BE590 /* Album.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C238CA731768B791002BE590 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C238CA741768B7C3002BE590 /* Constants.h */,
+				C238CA751768B7C3002BE590 /* Constants.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +281,9 @@
 				C22108D717676CA700C79FA6 /* AFURLConnectionOperation.m in Sources */,
 				C22108D817676CA700C79FA6 /* AFXMLRequestOperation.m in Sources */,
 				C22108D917676CA700C79FA6 /* UIImageView+AFNetworking.m in Sources */,
+				C238CA6E1767CF68002BE590 /* AlbumsViewController.m in Sources */,
+				C238CA721768ADB0002BE590 /* Album.m in Sources */,
+				C238CA761768B7C3002BE590 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
