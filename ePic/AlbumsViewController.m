@@ -196,7 +196,7 @@
 
 
 #pragma mark - utility methods
-// parses the album json and popu
+
 - (void) populateAlbumArray {
     
     NSMutableArray *userAlbums = [[NSMutableArray alloc] init];

@@ -32,6 +32,8 @@
 		C238CA6E1767CF68002BE590 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C238CA6D1767CF68002BE590 /* AlbumsViewController.m */; };
 		C238CA721768ADB0002BE590 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = C238CA711768ADB0002BE590 /* Album.m */; };
 		C238CA761768B7C3002BE590 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = C238CA751768B7C3002BE590 /* Constants.m */; };
+		C238CA791768D1D6002BE590 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C238CA781768D1D6002BE590 /* SystemConfiguration.framework */; };
+		C238CA7B1768D216002BE590 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C238CA7A1768D216002BE590 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		C238CA711768ADB0002BE590 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		C238CA741768B7C3002BE590 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		C238CA751768B7C3002BE590 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		C238CA781768D1D6002BE590 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C238CA7A1768D216002BE590 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C238CA7B1768D216002BE590 /* MobileCoreServices.framework in Frameworks */,
+				C238CA791768D1D6002BE590 /* SystemConfiguration.framework in Frameworks */,
 				C223764B1766657C00A153E8 /* UIKit.framework in Frameworks */,
 				C223764D1766657C00A153E8 /* Foundation.framework in Frameworks */,
 				C223764F1766657C00A153E8 /* CoreGraphics.framework in Frameworks */,
@@ -141,6 +147,8 @@
 		C22376491766657C00A153E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C238CA7A1768D216002BE590 /* MobileCoreServices.framework */,
+				C238CA781768D1D6002BE590 /* SystemConfiguration.framework */,
 				C22108BD17676CA700C79FA6 /* AFNetworking */,
 				C223764A1766657C00A153E8 /* UIKit.framework */,
 				C223764C1766657C00A153E8 /* Foundation.framework */,
