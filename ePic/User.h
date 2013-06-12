@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
 @property (nonatomic, strong) NSString *eMail;
+@property (nonatomic, strong) NSMutableArray *albums;
 
 @end
