@@ -12,6 +12,7 @@
 #import "User.h"
 #import "Album.h"
 #import "AppDelegate.h"
+#import "UserManager.h"
 
 @interface AlbumsViewController ()
 @property (nonatomic, strong) NSMutableArray *albumArray;
@@ -37,12 +38,25 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(sessionStateChanged:)
+                                                 name:FBSessionStateChangedNotification
+                                               object:nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     
-    // Grab the albums off our user object
-    [self populateAlbumArray];
+    [super viewWillAppear:animated];
+
+    if (FBSession.activeSession.isOpen) {
+
+        [self populateAlbumArray];
+
+    } else {
+        
+        [self performSegueWithIdentifier:@"loginModal" sender:self];
+    }
     
 }
 
@@ -50,6 +64,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Table view data source
@@ -195,7 +214,35 @@
 
 
 
+#pragma mark - FBUserSettingsDelegate methods
+
+- (void)loginViewController:(id)sender receivedError:(NSError *)error{
+    
+    if (error) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:error.localizedDescription
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+-(void)loginViewControllerDidLogUserOut:(id)sender {
+    
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
+
+
 #pragma mark - utility methods
+
+- (void)sessionStateChanged:(NSNotification*)notification {
+    if (FBSession.activeSession.isOpen) {
+        
+    } else {
+        [self performSegueWithIdentifier:@"loginModal" sender:self];
+    }
+}
 
 - (void) populateAlbumArray {
     

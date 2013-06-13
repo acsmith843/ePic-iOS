@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Bo-Hy-Op7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vOC-bb-T4C">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -65,17 +65,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="mz6-Ux-XT6"/>
+                    <connections>
+                        <segue destination="2" kind="modal" identifier="loginModal" id="TSt-yZ-Sde"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEG-c3-x8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="499" y="21"/>
+            <point key="canvasLocation" x="361" y="-127"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NX-h5-cbK">
@@ -88,39 +91,54 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="IXl-8v-TRO" kind="push" id="rFN-uq-zaD"/>
+                                    <action selector="testRemoteCall:" destination="2" eventType="touchUpInside" id="eE9-Od-BHG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNb-th-fq5">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="performLogin:" destination="2" eventType="touchUpInside" id="mNw-LD-8aa"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7NX-h5-cbK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="148" id="3gy-8I-9Hp"/>
-                            <constraint firstItem="7NX-h5-cbK" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="xCn-M9-aWS"/>
+                            <constraint firstItem="oNb-th-fq5" firstAttribute="top" secondItem="3" secondAttribute="top" constant="97" id="d0E-ne-Hkf"/>
+                            <constraint firstItem="7NX-h5-cbK" firstAttribute="top" secondItem="oNb-th-fq5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eZu-5V-yQU"/>
+                            <constraint firstItem="oNb-th-fq5" firstAttribute="centerX" secondItem="7NX-h5-cbK" secondAttribute="centerX" type="default" id="g6b-Kh-d9Q"/>
+                            <constraint firstItem="oNb-th-fq5" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="pNn-Ok-Edl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PqW-Mf-f7c"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="15"/>
+            <point key="canvasLocation" x="759" y="63"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Kph-20-bfG">
+        <scene sceneID="yfO-xm-Y9w">
             <objects>
-                <navigationController id="6Bo-Hy-Op7" sceneMemberID="viewController">
+                <navigationController id="vOC-bb-T4C" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ddu-uQ-J0p">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="THv-AP-rIJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="vI4-Ec-VvB"/>
+                        <segue destination="IXl-8v-TRO" kind="relationship" relationship="rootViewController" id="KEK-26-Q0e"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc2-Qj-7hY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="McB-gm-LKt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-414" y="15"/>
+            <point key="canvasLocation" x="-64" y="-127"/>
         </scene>
     </scenes>
     <classes>
@@ -130,14 +148,15 @@
                 <relationship kind="action" name="createAlbum:"/>
             </relationships>
         </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
+                <relationship kind="action" name="performLogin:"/>
                 <relationship kind="action" name="testRemoteCall:"/>
             </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
