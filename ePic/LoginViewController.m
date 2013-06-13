@@ -128,9 +128,6 @@
 //    [self.spinner startAnimating];
     
     [APP_DELEGATE openSessionWithAllowLoginUI:YES];
-    
-    UserManager *userManager = [[UserManager alloc] init];
-    [userManager findUserByFacebookId];
 }
 
 - (void)sessionStateChanged:(NSNotification*)notification {
