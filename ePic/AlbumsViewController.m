@@ -51,7 +51,7 @@
     
     [super viewWillAppear:animated];
 
-    if (FBSession.activeSession.isOpen) {
+    if (FBSession.activeSession.isOpen && APP_DELEGATE.currentUser == nil) {
         
         UserManager *userManager = [[UserManager alloc] init];
         [userManager findUserByFacebookIdcompletion:^(BOOL success){
@@ -64,8 +64,9 @@
             
         }];
 
+    } else if (FBSession.activeSession.isOpen && APP_DELEGATE.currentUser != nil) {
+        [self populateAlbumArray];
     } else {
-        
         [self performSegueWithIdentifier:@"loginModal" sender:self];
     }
 }
@@ -179,32 +180,6 @@
     [httpClient setParameterEncoding:AFJSONParameterEncoding];
     
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:@"2" parameters:nil];
-    
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        
-        NSLog(@"Success %@", JSON);
-        
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        
-        NSLog(@"Failure %@%@%@%@", request, response, error, JSON);
-        
-    }];
-    
-    [operation start];
-}
-
-- (IBAction)createAlbum:(id)sender {
-    
-    NSURL *urlString = [NSURL URLWithString:@"http://localhost:9000/v1/"];
-    
-    NSDictionary *userDic = @{@"title" : @"My First Album",
-                              @"ownerId" : @"1"
-                              };
-    
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:urlString];
-    [httpClient setParameterEncoding:AFJSONParameterEncoding];
-    
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"album" parameters:userDic];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         

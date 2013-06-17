@@ -43,6 +43,7 @@
 		C238CBEA176A1630002BE590 /* FBUserSettingsViewResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = C238CBE8176A1630002BE590 /* FBUserSettingsViewResources.bundle */; };
 		C238CBED176A49EF002BE590 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C238CBEC176A49EF002BE590 /* UserManager.m */; };
 		C2A2C61E176F914800070D35 /* CreateAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C61D176F914800070D35 /* CreateAlbumViewController.m */; };
+		C2A2C621176F93CC00070D35 /* AlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C620176F93CC00070D35 /* AlbumManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,8 @@
 		C238CBEC176A49EF002BE590 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		C2A2C61C176F914800070D35 /* CreateAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAlbumViewController.h; sourceTree = "<group>"; };
 		C2A2C61D176F914800070D35 /* CreateAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAlbumViewController.m; sourceTree = "<group>"; };
+		C2A2C61F176F93CC00070D35 /* AlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumManager.h; sourceTree = "<group>"; };
+		C2A2C620176F93CC00070D35 /* AlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,8 @@
 				C238CA751768B7C3002BE590 /* Constants.m */,
 				C238CBEB176A49EF002BE590 /* UserManager.h */,
 				C238CBEC176A49EF002BE590 /* UserManager.m */,
+				C2A2C61F176F93CC00070D35 /* AlbumManager.h */,
+				C2A2C620176F93CC00070D35 /* AlbumManager.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				C238CA761768B7C3002BE590 /* Constants.m in Sources */,
 				C238CBED176A49EF002BE590 /* UserManager.m in Sources */,
 				C2A2C61E176F914800070D35 /* CreateAlbumViewController.m in Sources */,
+				C2A2C621176F93CC00070D35 /* AlbumManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
