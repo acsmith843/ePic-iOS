@@ -66,6 +66,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="mz6-Ux-XT6"/>
                     <connections>
+                        <outlet property="albumTable" destination="6kh-cO-Y98" id="pJd-5T-NDe"/>
                         <segue destination="2" kind="modal" identifier="loginModal" id="TSt-yZ-Sde"/>
                     </connections>
                 </tableViewController>
@@ -146,6 +147,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AlbumsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="createAlbum:"/>
+                <relationship kind="outlet" name="albumTable" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="LoginViewController" superclassName="UIViewController">

@@ -15,6 +15,7 @@
 #import "UserManager.h"
 
 @interface AlbumsViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *albumTable;
 @property (nonatomic, strong) NSMutableArray *albumArray;
 @end
 
@@ -255,6 +256,8 @@
     }
     
     _albumArray = userAlbums;
+    
+    [self.albumTable reloadData];
     
 }
 
