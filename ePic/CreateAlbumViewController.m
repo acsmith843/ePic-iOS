@@ -46,19 +46,24 @@
 }
 
 
+
 #pragma mark - remote calls
 
 - (IBAction)createAlbum:(id)sender {
         
     NSDictionary *albumDic = @{@"title" : _albumTitle.text,
-                          @"ownerId" : @"1"
+                          @"ownerId" : APP_DELEGATE.currentUser.uuid
                           };
     
     AlbumManager *albumManager = [[AlbumManager alloc] init];
     [albumManager createAlbum:albumDic completion:^(BOOL success){
         
-        // takes us back to albums list
-        [self.navigationController popViewControllerAnimated:YES];
+        if (success) {
+            // takes us back to albums list
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            NSLog(@"Error creating album");
+        }
         
     }];
     

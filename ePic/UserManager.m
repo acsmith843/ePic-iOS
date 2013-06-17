@@ -37,7 +37,7 @@
              
              // pull facebook id and query db to see if a user with this id already exists
              NSString *fullPath = [NSString stringWithFormat:@"user/fb/%@", [user objectForKey:@"id"]];
-             NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:@"user/fb/bigbobby1234" parameters:nil];
+             NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:fullPath parameters:nil];
              
              AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                  
@@ -100,6 +100,7 @@
 -(void) populateAndSetCurrentUser : (id) JSON {
     
     User *currentUser = [[User alloc] init];
+    currentUser.uuid = [JSON valueForKeyPath:@"id"];
     currentUser.firstName = [JSON valueForKeyPath:@"firstName"];
     currentUser.lastName = [JSON valueForKeyPath:@"lastName"];
     currentUser.eMail = [JSON valueForKeyPath:@"eMail"];

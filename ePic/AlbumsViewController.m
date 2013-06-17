@@ -170,32 +170,6 @@
 
 
 
-#pragma mark - Remote Calls
-
-- (void) findAlbumsForUser {
-    
-    NSURL *urlString = [NSURL URLWithString:@"http://localhost:9000/v1/albums/"];
-    
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:urlString];
-    [httpClient setParameterEncoding:AFJSONParameterEncoding];
-    
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:@"2" parameters:nil];
-    
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        
-        NSLog(@"Success %@", JSON);
-        
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        
-        NSLog(@"Failure %@%@%@%@", request, response, error, JSON);
-        
-    }];
-    
-    [operation start];
-}
-
-
-
 #pragma mark - FBUserSettingsDelegate methods
 
 - (void)loginViewController:(id)sender receivedError:(NSError *)error{
