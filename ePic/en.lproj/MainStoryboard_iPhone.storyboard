@@ -4,6 +4,46 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
+        <!--Create Album View Controller-->
+        <scene sceneID="iez-Kq-4FF">
+            <objects>
+                <viewController id="2vN-Vv-YuI" customClass="CreateAlbumViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NyO-fX-kdb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UO0-av-Wux">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="IEi-rD-Vut"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTn-Qk-Xyu">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mTn-Qk-Xyu" firstAttribute="top" secondItem="NyO-fX-kdb" secondAttribute="top" constant="158" id="0dZ-pf-Trt"/>
+                            <constraint firstItem="UO0-av-Wux" firstAttribute="top" secondItem="NyO-fX-kdb" secondAttribute="top" constant="101" id="0eg-Di-dXE"/>
+                            <constraint firstItem="mTn-Qk-Xyu" firstAttribute="centerX" secondItem="UO0-av-Wux" secondAttribute="centerX" type="default" id="XwI-UW-arQ"/>
+                            <constraint firstItem="UO0-av-Wux" firstAttribute="centerX" secondItem="NyO-fX-kdb" secondAttribute="centerX" type="default" id="dGF-AU-m39"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5bT-9x-oT7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Um-qV-Jfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="-432"/>
+        </scene>
         <!--Albums View Controller-->
         <scene sceneID="XJ8-s7-uZs">
             <objects>
@@ -64,7 +104,13 @@
                             <outlet property="delegate" destination="IXl-8v-TRO" id="qva-8b-kaJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="mz6-Ux-XT6"/>
+                    <navigationItem key="navigationItem" id="mz6-Ux-XT6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VuN-LK-wrm">
+                            <connections>
+                                <segue destination="2vN-Vv-YuI" kind="push" identifier="createAlbumSegue" id="RP9-C9-hgs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="albumTable" destination="6kh-cO-Y98" id="pJd-5T-NDe"/>
                         <segue destination="2" kind="modal" identifier="loginModal" id="TSt-yZ-Sde"/>
@@ -121,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="99"/>
+            <point key="canvasLocation" x="756" y="259"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yfO-xm-Y9w">
@@ -142,6 +188,28 @@
             <point key="canvasLocation" x="-64" y="-127"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AlbumsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlbumsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="createAlbum:"/>
+                <relationship kind="outlet" name="albumTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="CreateAlbumViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateAlbumViewController.h"/>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="performLogin:"/>
+                <relationship kind="action" name="testRemoteCall:"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

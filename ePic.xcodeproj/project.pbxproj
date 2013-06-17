@@ -42,6 +42,7 @@
 		C238CBE9176A1630002BE590 /* FacebookSDKResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = C238CBE7176A1630002BE590 /* FacebookSDKResources.bundle */; };
 		C238CBEA176A1630002BE590 /* FBUserSettingsViewResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = C238CBE8176A1630002BE590 /* FBUserSettingsViewResources.bundle */; };
 		C238CBED176A49EF002BE590 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C238CBEC176A49EF002BE590 /* UserManager.m */; };
+		C2A2C61E176F914800070D35 /* CreateAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C61D176F914800070D35 /* CreateAlbumViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,8 @@
 		C238CBE8176A1630002BE590 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = ../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
 		C238CBEB176A49EF002BE590 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		C238CBEC176A49EF002BE590 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		C2A2C61C176F914800070D35 /* CreateAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAlbumViewController.h; sourceTree = "<group>"; };
+		C2A2C61D176F914800070D35 /* CreateAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAlbumViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +249,8 @@
 				C238CA6C1767CF68002BE590 /* AlbumsViewController.h */,
 				C22376691766657D00A153E8 /* LoginViewController.m */,
 				C22376681766657D00A153E8 /* LoginViewController.h */,
+				C2A2C61C176F914800070D35 /* CreateAlbumViewController.h */,
+				C2A2C61D176F914800070D35 /* CreateAlbumViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				C238CA721768ADB0002BE590 /* Album.m in Sources */,
 				C238CA761768B7C3002BE590 /* Constants.m in Sources */,
 				C238CBED176A49EF002BE590 /* UserManager.m in Sources */,
+				C2A2C61E176F914800070D35 /* CreateAlbumViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
