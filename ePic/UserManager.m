@@ -20,7 +20,7 @@
 
 #pragma mark - remote calls
 
-- (void) findUserByFacebookId {
+- (void) findUserByFacebookIdcompletion:(void (^)(BOOL success))callbackBlock {
     
     //Starts a connection to Facebook API so we can grab the details off the fb user and check for existing token
     [[FBRequest requestForMe] startWithCompletionHandler:
@@ -43,6 +43,10 @@
                  
                  NSLog(@"Success %@", JSON);
                  [self populateAndSetCurrentUser:JSON];
+                 
+                 if (callbackBlock != nil) {
+                     callbackBlock(YES);
+                 }
                  
              } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                  
@@ -105,7 +109,6 @@
     NSLog(@"current user UM: %@", currentUser);
     APP_DELEGATE.currentUser = currentUser;
     NSLog(@"AD user UM: %@", APP_DELEGATE.currentUser);
-    
 }
 
 @end

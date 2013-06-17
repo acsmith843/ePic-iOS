@@ -73,9 +73,6 @@ NSString *const FBSessionStateChangedNotification =
             if (!error) {
                 // We have a valid session
                 NSLog(@"User session found %@", FBSession.activeSession.accessToken);
-                
-                UserManager *userManager = [[UserManager alloc] init];
-                [userManager findUserByFacebookId];
             }
             break;
         case FBSessionStateClosed:

@@ -44,6 +44,7 @@
                                              selector:@selector(sessionStateChanged:)
                                                  name:FBSessionStateChangedNotification
                                                object:nil];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -51,14 +52,22 @@
     [super viewWillAppear:animated];
 
     if (FBSession.activeSession.isOpen) {
-
-        [self populateAlbumArray];
+        
+        UserManager *userManager = [[UserManager alloc] init];
+        [userManager findUserByFacebookIdcompletion:^(BOOL success){
+            
+            if (success) {
+                [self populateAlbumArray];  
+            } else {
+                NSLog(@"Could not find user by fb id");
+            }
+            
+        }];
 
     } else {
         
         [self performSegueWithIdentifier:@"loginModal" sender:self];
     }
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,10 +76,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) dealloc {
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
+
 
 #pragma mark - Table view data source
 
@@ -231,19 +237,13 @@
 
 -(void)loginViewControllerDidLogUserOut:(id)sender {
     
+    [APP_DELEGATE closeSession];
     [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
 
-#pragma mark - utility methods
 
-- (void)sessionStateChanged:(NSNotification*)notification {
-    if (FBSession.activeSession.isOpen) {
-        
-    } else {
-        [self performSegueWithIdentifier:@"loginModal" sender:self];
-    }
-}
+#pragma mark - utility methods
 
 - (void) populateAlbumArray {
     
@@ -259,6 +259,15 @@
     
     [self.albumTable reloadData];
     
+}
+
+- (void)sessionStateChanged:(NSNotification* )notification {
+    
+    if (FBSession.activeSession.isOpen) {
+        
+    } else {
+        [self performSegueWithIdentifier:@"loginModal" sender:self];
+    }
 }
 
 @end

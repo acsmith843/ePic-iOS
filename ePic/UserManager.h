@@ -10,6 +10,6 @@
 
 @interface UserManager : NSObject
 
--(void) findUserByFacebookId;
+-(void) findUserByFacebookIdcompletion:(void (^)(BOOL success))callbackBlock;
 
 @end

@@ -121,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="63"/>
+            <point key="canvasLocation" x="796" y="99"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yfO-xm-Y9w">
@@ -142,25 +142,6 @@
             <point key="canvasLocation" x="-64" y="-127"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AlbumsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlbumsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="createAlbum:"/>
-                <relationship kind="outlet" name="albumTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="performLogin:"/>
-                <relationship kind="action" name="testRemoteCall:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

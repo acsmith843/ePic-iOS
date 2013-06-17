@@ -61,8 +61,6 @@
     
     [super viewWillAppear:animated];
     
-//    [self findUser];
-    
 }
 
 - (IBAction)testRemoteCall:(id)sender {
@@ -130,7 +128,8 @@
     [APP_DELEGATE openSessionWithAllowLoginUI:YES];
 }
 
-- (void)sessionStateChanged:(NSNotification*)notification {
+- (void)sessionStateChanged:(NSNotification *)notification {
+    
     //if success then dismiss the modal
     if (FBSession.activeSession.isOpen) {
         [self dismissViewControllerAnimated:YES completion:nil];
