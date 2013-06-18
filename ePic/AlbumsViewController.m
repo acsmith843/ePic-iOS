@@ -39,12 +39,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(sessionStateChanged:)
-                                                 name:FBSessionStateChangedNotification
-                                               object:nil];
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -208,15 +202,6 @@
     
     [self.albumTable reloadData];
     
-}
-
-- (void)sessionStateChanged:(NSNotification* )notification {
-    
-    if (FBSession.activeSession.isOpen) {
-        
-    } else {
-        [self performSegueWithIdentifier:@"loginModal" sender:self];
-    }
 }
 
 @end

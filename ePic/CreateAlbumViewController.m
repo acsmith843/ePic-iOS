@@ -40,12 +40,11 @@
 -(void) viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
 }
 
 
 
-#pragma mark - remote calls
+#pragma mark - manager calls
 
 - (IBAction)createAlbum:(id)sender {
         

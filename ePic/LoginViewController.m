@@ -7,12 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "AFHTTPClient.h"
-#import "AFJSONRequestOperation.h"
-#import "User.h"
-#import "Album.h"
 #import "AppDelegate.h"
-#import "AlbumsViewController.h"
 #import "UserManager.h"
 
 @interface LoginViewController ()
@@ -32,20 +27,6 @@
         selector:@selector(sessionStateChanged:)
         name:FBSessionStateChangedNotification
         object:nil];
-    
-    // Check the session for a cached token to show the proper authenticated
-    // UI. However, since this is not user intitiated, do not show the login UX.
-    BOOL signedIn = [APP_DELEGATE openSessionWithAllowLoginUI:NO];
-    
-    if(signedIn){
-        
-        int64_t delayInSeconds = 0.5;
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            [self dismissViewControllerAnimated:NO completion:nil];
-        });
-        
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,7 +41,6 @@
 - (void) viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
 }
 
 
