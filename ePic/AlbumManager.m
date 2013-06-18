@@ -30,9 +30,10 @@
         
         NSDictionary *createdAlbum = JSON;
         
-        // make sure we add the new album to our current user
+        // make sure we add the new album to our current user and our latest album
+        // is displayed at the top of the table
         NSMutableArray *albumsArray = [[NSMutableArray alloc] initWithArray:APP_DELEGATE.currentUser.albums];
-        [albumsArray addObject:createdAlbum];
+        [albumsArray insertObject:createdAlbum atIndex:0];
         [APP_DELEGATE.currentUser setAlbums:albumsArray];
         
         if (callbackBlock != nil) {

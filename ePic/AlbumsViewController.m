@@ -15,7 +15,7 @@
 #import "UserManager.h"
 
 @interface AlbumsViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *albumTable;
+@property (nonatomic, weak) IBOutlet UITableView *albumTable;
 @property (nonatomic, strong) NSMutableArray *albumArray;
 @end
 
@@ -186,7 +186,6 @@
 
 -(void)loginViewControllerDidLogUserOut:(id)sender {
     
-    [APP_DELEGATE closeSession];
     [self.navigationController popToRootViewControllerAnimated:NO];
 }
 

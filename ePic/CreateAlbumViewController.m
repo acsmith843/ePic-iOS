@@ -7,13 +7,11 @@
 //
 
 #import "CreateAlbumViewController.h"
-#import "Album.h"
 #import "AppDelegate.h"
-#import "Constants.h"
 #import "AlbumManager.h"
 
 @interface CreateAlbumViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *albumTitle;
+@property (nonatomic, weak) IBOutlet UITextField *albumTitle;
 @end
 
 @implementation CreateAlbumViewController
