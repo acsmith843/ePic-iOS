@@ -105,7 +105,7 @@
     albumTitle.text = album.title;
     // Display owner
     UILabel *albumOwner = (UILabel *)[cell viewWithTag:101];
-    albumOwner.text = [NSString stringWithFormat:@"Owned By: %@", album.ownerId];
+    albumOwner.text = [NSString stringWithFormat:@"Owned By: %@", album.ownerName];
     // Display creation date
     UILabel *albumCreateDate = (UILabel *)[cell viewWithTag:102];
     albumCreateDate.text = @"6/20/1984";
@@ -201,6 +201,7 @@
         Album *album = [[Album alloc] init];
         album.title = [albumDic objectForKey:@"title"];
         album.ownerId = [albumDic objectForKey:@"ownerId"];
+        album.ownerName = [albumDic objectForKey:@"ownerName"];
         [userAlbums addObject:album];
     }
     

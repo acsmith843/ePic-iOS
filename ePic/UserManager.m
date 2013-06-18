@@ -68,8 +68,7 @@
     
     NSURL *urlString = [NSURL URLWithString:URL_LOCAL_BASE];
     
-    NSDictionary *dic = @{@"firstName" : [user objectForKey:@"name"],
-                          @"lastName" : [user objectForKey:@"name"],
+    NSDictionary *dic = @{@"name" : [user objectForKey:@"name"],
                           @"eMail" : [user objectForKey:@"email"],
                           @"facebookId" : [user objectForKey:@"id"]
                           };
@@ -101,8 +100,7 @@
     
     User *currentUser = [[User alloc] init];
     currentUser.uuid = [JSON valueForKeyPath:@"id"];
-    currentUser.firstName = [JSON valueForKeyPath:@"firstName"];
-    currentUser.lastName = [JSON valueForKeyPath:@"lastName"];
+    currentUser.name = [JSON valueForKeyPath:@"name"];
     currentUser.eMail = [JSON valueForKeyPath:@"eMail"];
     currentUser.albums = [JSON valueForKeyPath:@"albums"];
     

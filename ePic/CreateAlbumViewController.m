@@ -52,7 +52,8 @@
 - (IBAction)createAlbum:(id)sender {
         
     NSDictionary *albumDic = @{@"title" : _albumTitle.text,
-                          @"ownerId" : APP_DELEGATE.currentUser.uuid
+                               @"ownerId" : APP_DELEGATE.currentUser.uuid,
+                               @"ownerName" : APP_DELEGATE.currentUser.name
                           };
     
     AlbumManager *albumManager = [[AlbumManager alloc] init];
