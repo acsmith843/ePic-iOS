@@ -50,6 +50,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     ImageCell *imageCell = [collectionView  dequeueReusableCellWithReuseIdentifier:@"imageCell" forIndexPath:indexPath];
+//    imageCell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-frame.png"]];
+    imageCell.backgroundColor = [UIColor lightGrayColor];
     
     NSURL *url = [NSURL URLWithString:[_albumImages objectAtIndex:indexPath.item]];
     [imageCell.thumbnailView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"bluetint.png"]];

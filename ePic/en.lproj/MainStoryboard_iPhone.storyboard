@@ -148,15 +148,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubz-eK-rJM"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubz-eK-rJM">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="72" id="Iw5-4w-6vx"/>
+                                                <constraint firstAttribute="width" constant="90" id="lTO-m2-tXb"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="ubz-eK-rJM" firstAttribute="trailing" secondItem="93S-EB-VXj" secondAttribute="trailing" type="default" id="0dH-9F-Wk5"/>
-                                    <constraint firstItem="ubz-eK-rJM" firstAttribute="bottom" secondItem="93S-EB-VXj" secondAttribute="bottom" type="default" id="SDU-OG-N7w"/>
-                                    <constraint firstItem="ubz-eK-rJM" firstAttribute="leading" secondItem="93S-EB-VXj" secondAttribute="leading" type="default" id="Y0R-am-VBY"/>
-                                    <constraint firstItem="ubz-eK-rJM" firstAttribute="top" secondItem="93S-EB-VXj" secondAttribute="top" type="default" id="bbs-zq-dV8"/>
+                                    <constraint firstAttribute="bottom" secondItem="ubz-eK-rJM" secondAttribute="bottom" constant="20" type="default" id="IzW-kK-i6a"/>
+                                    <constraint firstItem="ubz-eK-rJM" firstAttribute="centerX" secondItem="93S-EB-VXj" secondAttribute="centerX" type="default" id="olS-qA-mbc"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="thumbnailView" destination="ubz-eK-rJM" id="Umh-Qb-mmf"/>
