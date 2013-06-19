@@ -13,6 +13,6 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *ownerId;
 @property (nonatomic, strong) NSString *ownerName;
-@property (nonatomic, strong) NSMutableArray *thumbs;
+@property (nonatomic, strong) NSMutableArray *images;
 
 @end

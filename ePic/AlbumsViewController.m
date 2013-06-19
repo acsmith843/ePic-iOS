@@ -13,10 +13,12 @@
 #import "Album.h"
 #import "AppDelegate.h"
 #import "UserManager.h"
+#import "ImagesViewController.h"
 
 @interface AlbumsViewController ()
 @property (nonatomic, weak) IBOutlet UITableView *albumTable;
 @property (nonatomic, strong) NSMutableArray *albumArray;
+@property (nonatomic, strong) NSMutableArray *chosenAlbumImages;
 @end
 
 @implementation AlbumsViewController
@@ -154,12 +156,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    
+    Album *chosenAlbum = [self.albumArray objectAtIndex:indexPath.row];
+    _chosenAlbumImages = [[NSMutableArray alloc] initWithArray:chosenAlbum.images];
+    [_chosenAlbumImages addObject:@"http://3.bp.blogspot.com/-iDeA6LO0YrU/UDedd7dX29I/AAAAAAAABi0/ridmpc2Awz8/s1600/boxer-dogs-1.jpg"];
+    
+//    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+//    [flow setItemSize:CGSizeMake(60, 60)];
+//    [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+//    
+//    ImagesViewController *imagesViewController = [[ImagesViewController alloc] initWithCollectionViewLayout:flow];
+//    imagesViewController.albumImages = testArray;
+//    
+//    // Pass the selected object to the new view controller.
+//    [self.navigationController pushViewController:imagesViewController animated:YES];
+    
+    [self performSegueWithIdentifier:@"imageSegue" sender:indexPath];
 }
 
 
@@ -201,6 +213,19 @@
     _albumArray = userAlbums;
     
     [self.albumTable reloadData];
+    
+}
+
+
+
+#pragma mark - segue methods
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"imageSegue"]) {
+        
+        [[segue destinationViewController] setAlbumImages:_chosenAlbumImages];
+    }
     
 }
 
