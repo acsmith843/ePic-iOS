@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImagesViewController : UICollectionViewController
+@interface ImagesViewController : UICollectionViewController 
 
 @property (nonatomic, strong) NSMutableArray *albumImages;
 

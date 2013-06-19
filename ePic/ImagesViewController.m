@@ -59,7 +59,4 @@
     return imageCell;
 }
 
-
-
-
 @end

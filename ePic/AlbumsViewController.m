@@ -160,6 +160,9 @@
     Album *chosenAlbum = [self.albumArray objectAtIndex:indexPath.row];
     _chosenAlbumImages = [[NSMutableArray alloc] initWithArray:chosenAlbum.images];
     [_chosenAlbumImages addObject:@"http://3.bp.blogspot.com/-iDeA6LO0YrU/UDedd7dX29I/AAAAAAAABi0/ridmpc2Awz8/s1600/boxer-dogs-1.jpg"];
+    [_chosenAlbumImages addObject:@"http://25.media.tumblr.com/tumblr_md755jLQOw1qawpzlo1_500.jpg"];
+    [_chosenAlbumImages addObject:@"http://3.bp.blogspot.com/-iDeA6LO0YrU/UDedd7dX29I/AAAAAAAABi0/ridmpc2Awz8/s1600/boxer-dogs-1.jpg"];
+    [_chosenAlbumImages addObject:@"http://25.media.tumblr.com/tumblr_md755jLQOw1qawpzlo1_500.jpg"];
     
 //    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
 //    [flow setItemSize:CGSizeMake(60, 60)];
