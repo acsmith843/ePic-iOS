@@ -39,9 +39,9 @@
 		C238CBE4176A157A002BE590 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C238CBE0176A157A002BE590 /* AdSupport.framework */; };
 		C238CBE5176A157A002BE590 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C238CBE1176A157A002BE590 /* libsqlite3.dylib */; };
 		C238CBE6176A157A002BE590 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C238CBE2176A157A002BE590 /* Social.framework */; };
-		C238CBE9176A1630002BE590 /* FacebookSDKResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = C238CBE7176A1630002BE590 /* FacebookSDKResources.bundle */; };
-		C238CBEA176A1630002BE590 /* FBUserSettingsViewResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = C238CBE8176A1630002BE590 /* FBUserSettingsViewResources.bundle */; };
 		C238CBED176A49EF002BE590 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C238CBEC176A49EF002BE590 /* UserManager.m */; };
+		C27DF679177255C300E03693 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C27DF678177255C300E03693 /* FacebookSDKResources.bundle */; };
+		C27DF67B177256DC00E03693 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C27DF67A177256DC00E03693 /* FBUserSettingsViewResources.bundle */; };
 		C29295461770F63900942BE4 /* ImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29295451770F63900942BE4 /* ImagesViewController.m */; };
 		C2929549177223C900942BE4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2929548177223C800942BE4 /* CameraViewController.m */; };
 		C2A2C61E176F914800070D35 /* CreateAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C61D176F914800070D35 /* CreateAlbumViewController.m */; };
@@ -101,10 +101,10 @@
 		C238CBE0176A157A002BE590 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		C238CBE1176A157A002BE590 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		C238CBE2176A157A002BE590 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		C238CBE7176A1630002BE590 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
-		C238CBE8176A1630002BE590 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = ../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
 		C238CBEB176A49EF002BE590 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		C238CBEC176A49EF002BE590 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		C27DF678177255C300E03693 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = "../../SPARC mobile/CrowdFlik-iOS/FacebookSDKResources.bundle"; sourceTree = "<group>"; };
+		C27DF67A177256DC00E03693 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = "../../SPARC mobile/CrowdFlik-iOS/FBUserSettingsViewResources.bundle"; sourceTree = "<group>"; };
 		C29295441770F63900942BE4 /* ImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesViewController.h; sourceTree = "<group>"; };
 		C29295451770F63900942BE4 /* ImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesViewController.m; sourceTree = "<group>"; };
 		C2929547177223C800942BE4 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
@@ -122,8 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C238CBE9176A1630002BE590 /* FacebookSDKResources.bundle in Frameworks */,
-				C238CBEA176A1630002BE590 /* FBUserSettingsViewResources.bundle in Frameworks */,
 				C238CBE3176A157A002BE590 /* Accounts.framework in Frameworks */,
 				C238CBE4176A157A002BE590 /* AdSupport.framework in Frameworks */,
 				C238CBE5176A157A002BE590 /* libsqlite3.dylib in Frameworks */,
@@ -186,8 +184,8 @@
 		C22376491766657C00A153E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C238CBE7176A1630002BE590 /* FacebookSDKResources.bundle */,
-				C238CBE8176A1630002BE590 /* FBUserSettingsViewResources.bundle */,
+				C27DF67A177256DC00E03693 /* FBUserSettingsViewResources.bundle */,
+				C27DF678177255C300E03693 /* FacebookSDKResources.bundle */,
 				C238CBDF176A1579002BE590 /* Accounts.framework */,
 				C238CBE0176A157A002BE590 /* AdSupport.framework */,
 				C238CBE1176A157A002BE590 /* libsqlite3.dylib */,
@@ -334,6 +332,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27DF67B177256DC00E03693 /* FBUserSettingsViewResources.bundle in Resources */,
+				C27DF679177255C300E03693 /* FacebookSDKResources.bundle in Resources */,
 				C22376551766657C00A153E8 /* InfoPlist.strings in Resources */,
 				C223765D1766657D00A153E8 /* Default.png in Resources */,
 				C223765F1766657D00A153E8 /* Default@2x.png in Resources */,

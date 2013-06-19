@@ -11,8 +11,7 @@
 @interface CameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
-
-- (IBAction)takePhoto:  (UIButton *)sender;
-- (IBAction)selectPhoto:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *takePhoto;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *selectPhoto;
 
 @end

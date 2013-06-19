@@ -28,6 +28,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [self.navigationController setToolbarHidden:NO];
+    
     // if there is no camera on the user's device, let the user know instead of crashing
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
@@ -51,7 +53,7 @@
 
 #pragma mark - button actions
 
-- (IBAction)takePhoto:(UIButton *)sender {
+- (IBAction)takePhoto:(id)sender {
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -61,7 +63,7 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-- (IBAction)selectPhoto:(UIButton *)sender {
+- (IBAction)selectPhoto:(id)sender {
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
