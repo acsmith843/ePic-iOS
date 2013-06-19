@@ -39,6 +39,8 @@
 
 
 
+#pragma mark - collection view delegate methods
+
 -(NSInteger )collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     return [_albumImages count];
