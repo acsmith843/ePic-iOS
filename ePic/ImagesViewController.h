@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImagesViewController : UICollectionViewController 
+@interface ImagesViewController : UICollectionViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *albumImages;
+-(IBAction)showActionSheet:(id)sender;
 
 @end

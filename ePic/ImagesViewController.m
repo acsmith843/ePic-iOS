@@ -29,6 +29,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // if there is no camera on the user's device, let the user know instead of crashing
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Device has no camera"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,6 +69,76 @@
     [imageCell.thumbnailView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"bluetint.png"]];
     
     return imageCell;
+}
+
+
+
+#pragma mark - action sheet delegate
+
+-(IBAction)showActionSheet:(id)sender {
+    
+    // TODO: eventually add option to just use the last photo taken
+    
+    UIActionSheet *popupQuery = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete Photo" otherButtonTitles:@"Take Photo", @"Add Existing Photo", nil];
+    popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    [popupQuery showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+     switch (buttonIndex) {
+         case 0:
+             // TODO : add delete photo logic
+             break;
+         case 1:
+             [self takePhoto];
+             break;
+         case 2:             
+             [self selectPhoto];
+             break;
+     }
+     
+}
+
+
+
+#pragma mark - camera methods
+
+- (void) takePhoto {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void) selectPhoto {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+
+
+#pragma mark - image picker delegate methods
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+//    self.imageView.image = chosenImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

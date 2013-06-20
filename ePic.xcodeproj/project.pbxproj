@@ -43,7 +43,6 @@
 		C27DF679177255C300E03693 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C27DF678177255C300E03693 /* FacebookSDKResources.bundle */; };
 		C27DF67B177256DC00E03693 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C27DF67A177256DC00E03693 /* FBUserSettingsViewResources.bundle */; };
 		C29295461770F63900942BE4 /* ImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29295451770F63900942BE4 /* ImagesViewController.m */; };
-		C2929549177223C900942BE4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2929548177223C800942BE4 /* CameraViewController.m */; };
 		C2A2C61E176F914800070D35 /* CreateAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C61D176F914800070D35 /* CreateAlbumViewController.m */; };
 		C2A2C621176F93CC00070D35 /* AlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C620176F93CC00070D35 /* AlbumManager.m */; };
 		C2A2C6281770C55D00070D35 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C6271770C55D00070D35 /* ImageCell.m */; };
@@ -107,8 +106,6 @@
 		C27DF67A177256DC00E03693 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBUserSettingsViewResources.bundle; path = "../../SPARC mobile/CrowdFlik-iOS/FBUserSettingsViewResources.bundle"; sourceTree = "<group>"; };
 		C29295441770F63900942BE4 /* ImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesViewController.h; sourceTree = "<group>"; };
 		C29295451770F63900942BE4 /* ImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesViewController.m; sourceTree = "<group>"; };
-		C2929547177223C800942BE4 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
-		C2929548177223C800942BE4 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		C2A2C61C176F914800070D35 /* CreateAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAlbumViewController.h; sourceTree = "<group>"; };
 		C2A2C61D176F914800070D35 /* CreateAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAlbumViewController.m; sourceTree = "<group>"; };
 		C2A2C61F176F93CC00070D35 /* AlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumManager.h; sourceTree = "<group>"; };
@@ -266,8 +263,6 @@
 				C2A2C61D176F914800070D35 /* CreateAlbumViewController.m */,
 				C29295441770F63900942BE4 /* ImagesViewController.h */,
 				C29295451770F63900942BE4 /* ImagesViewController.m */,
-				C2929547177223C800942BE4 /* CameraViewController.h */,
-				C2929548177223C800942BE4 /* CameraViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -371,7 +366,6 @@
 				C2A2C621176F93CC00070D35 /* AlbumManager.m in Sources */,
 				C2A2C6281770C55D00070D35 /* ImageCell.m in Sources */,
 				C29295461770F63900942BE4 /* ImagesViewController.m in Sources */,
-				C2929549177223C900942BE4 /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
